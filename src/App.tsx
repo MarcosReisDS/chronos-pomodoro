@@ -1,16 +1,18 @@
 import "./styles/theme.css"
 import "./styles/global.css"
+import { Container } from "./components/Container"
+import { Heading } from "./components/Heading"
 
 export function App() {
     return (
         <>
-            <div className="container">
-                <div className="content">
-                    <section>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt sapiente itaque magni, soluta asperiores modi. Numquam, possimus excepturi pariatur eligendi maxime ad autem quaerat ducimus, at nobis, odit placeat illum!
-                    </section>
-                </div>
-            </div>
+            <Container>
+                <Heading>LOGO</Heading>
+            </Container>
+
+            <Container>
+                <Heading>MENU</Heading>
+            </Container>
         </>
     )
 }
