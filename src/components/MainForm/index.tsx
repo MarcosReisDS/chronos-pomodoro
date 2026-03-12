@@ -5,10 +5,13 @@ import { DefaultInput } from "../DefaultInput";
 import { useRef } from "react";
 import type { TaskModel } from "../../models/TaskModel";
 import { useTaskContext } from "../../contexts/TaskContext/useTaskContext";
+import { getNextCycle } from "../../utils/getNextCycle";
 
 export function MainForm() {
-    const { setState } = useTaskContext();
+    const { state, setState } = useTaskContext();
     const taskNameInput = useRef<HTMLInputElement>(null);
+
+    const nextCycle = getNextCycle(state.currentCycle)
 
     function handleCreateNewTask(event: React.SubmitEvent<HTMLFormElement>) {
         event.preventDefault();
@@ -38,7 +41,7 @@ export function MainForm() {
             return {
                 ...prevState,
                 activeTask: newTask,
-                currentCycle: 1, // Conferir
+                currentCycle: nextCycle,
                 secondsRemaining, // Conferir
                 formattedSecondsRemaining: '00:00', // Conferir
                 tasks: [...prevState.tasks, newTask]
