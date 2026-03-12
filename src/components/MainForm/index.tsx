@@ -63,6 +63,7 @@ export function MainForm() {
                     if (prevState.activeTask && prevState.activeTask.id === task.id) {
                         return { ...task, interruptDate: Date.now() }
                     }
+                    return task;
                 })
             }
         })
