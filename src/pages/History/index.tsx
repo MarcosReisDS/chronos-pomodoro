@@ -26,29 +26,31 @@ export function History() {
 
             <Container>
                 <div className={styles.responsiveTable}>
-                    <thead>
-                        <tr>
-                            <th>Tarefa</th>
-                            <th>Duração</th>
-                            <th>Data</th>
-                            <th>Status</th>
-                            <th>Tipo</th>
-                        </tr>
-                    </thead>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tarefa</th>
+                                <th>Duração</th>
+                                <th>Data</th>
+                                <th>Status</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        {Array.from({ length: 20 }).map(() => {
-                            return (
-                                <tr>
-                                    <td>Estudar</td>
-                                    <td>25min</td>
-                                    <td>20/04/2025 08:00</td>
-                                    <td>Completa</td>
-                                    <td>Foco</td>
-                                </tr>
-                            )
-                        })}
-                    </tbody>
+                        <tbody>
+                            {Array.from({ length: 20 }).map(() => {
+                                return (
+                                    <tr>
+                                        <td>Estudar</td>
+                                        <td>25min</td>
+                                        <td>20/04/2025 08:00</td>
+                                        <td>Completa</td>
+                                        <td>Foco</td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
                 </div>
             </Container>
         </MainTemplate>
