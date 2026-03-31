@@ -1,11 +1,8 @@
 import { SaveIcon } from "lucide-react";
 import { Container } from "../../components/Container";
-import { CountDown } from "../../components/CountDown";
 import { DefaultButton } from "../../components/DefaultButton";
 import { DefaultInput } from "../../components/DefaultInput";
 import { Heading } from "../../components/Heading";
-import { MainForm } from "../../components/MainForm";
-import type { TaskStateModel } from "../../models/TaskStateModel";
 import { MainTemplate } from "../../templates/MainTemplate";
 
 export function Settings() {
