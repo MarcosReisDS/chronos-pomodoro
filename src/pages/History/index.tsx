@@ -71,6 +71,10 @@ export function History() {
         }
     }, [])
 
+    useEffect(() => {
+        document.title = "Histórico - Chronos Pomodoro";
+    }, [])
+
     return (
         <MainTemplate>
             <Container>
